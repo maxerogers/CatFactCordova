@@ -29,9 +29,8 @@
     </head>
     <body>
         <div class="app">
-          <img src="img/gatto-dolce.png">
+          <img id="pusheen" src="img/gatto-dolce.png">
           <p id="catfact"> </p>
-          <button id="new_fact">New Fact</button>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
@@ -41,7 +40,7 @@
             $.get("http://catfacts.maxrogers.me/random_cat_fact", function(data){
               $("#catfact").html(data);
             });
-            $("#new_fact").click(function(){
+            $("#pusheen").click(function(){
               $.get("http://catfacts.maxrogers.me/random_cat_fact", function(data){
                 $("#catfact").html(data);
               });

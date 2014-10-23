@@ -29,7 +29,7 @@
     </head>
     <body>
         <div class="app">
-          <img src="img/gatto-dolce.png">
+          <img id="pusheen" src="img/gatto-dolce.png">
           <p id="catfact"> </p>
           <button id="new_fact">New Fact</button>
         </div>
@@ -42,6 +42,11 @@
               $("#catfact").html(data);
             });
             $("#new_fact").click(function(){
+              $.get("http://catfacts.maxrogers.me/random_cat_fact", function(data){
+                $("#catfact").html(data);
+              });
+            });
+            $("#pusheen").click(function(){
               $.get("http://catfacts.maxrogers.me/random_cat_fact", function(data){
                 $("#catfact").html(data);
               });
